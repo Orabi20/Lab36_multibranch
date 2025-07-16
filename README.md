@@ -206,11 +206,21 @@ After pushing to any of the branches (`main`, `stag`, `dev`), Jenkins:
 3. Pushes to DockerHub
 4. Deploys to Kubernetes in the matching namespace
 
-<img width="959" height="372" alt="36 5" src="https://github.com/user-attachments/assets/69f62d7f-178a-4883-93a0-7ce6d5657e37" />
+<img width="959" height="430" alt="image" src="https://github.com/user-attachments/assets/a02a8c70-411d-487e-8ba1-6ec8cd57d792" />
+
+<img width="955" height="90" alt="36 2" src="https://github.com/user-attachments/assets/21b9dd30-f078-424c-b712-8e307e913bfe" />
+
 
 <img width="959" height="434" alt="image" src="https://github.com/user-attachments/assets/07e12716-d81d-4f94-a345-d2cdcf4fb556" />
 
+<img width="952" height="89" alt="36 3" src="https://github.com/user-attachments/assets/5322331d-0bc2-415a-aa8a-d1c83b367d52" />
+
+
 <img width="959" height="428" alt="36 6" src="https://github.com/user-attachments/assets/84395911-cadf-42ef-acb6-614e22ddd95a" />
+
+<img width="951" height="99" alt="36 1" src="https://github.com/user-attachments/assets/22cdbc10-6204-446f-a11b-2829aed9bffd" />
+
+
 
 
 
