@@ -8,7 +8,7 @@ pipeline {
         DOCKER_PASSWORD   = credentials('Docker-Password')
         K8S_API_SERVER    = credentials('api-server')
         K8S_TOKEN         = credentials('token')
-        DEPLOYMENT_FILE   = 'deployment.yaml'
+        DEPLOYMENT_FILE   = 'k8s/deployment.yaml'
     }
 
     stages {
@@ -26,4 +26,44 @@ pipeline {
 
         stage('RunUnitTest') {
             steps {
-                ru
+                runUnitTests()
+            }
+        }
+
+        stage('BuildApp') {
+            steps {
+                buildApp()
+            }
+        }
+
+        stage('BuildImage') {
+            steps {
+                buildImage(env.DOCKER_IMAGE)
+            }
+        }
+
+        stage('ScanImage') {
+            steps {
+                scanImage(env.DOCKER_IMAGE)
+            }
+        }
+
+        stage('PushImage') {
+            steps {
+                pushImage(env.DOCKER_IMAGE, env.DOCKER_USERNAME, env.DOCKER_PASSWORD)
+            }
+        }
+
+        stage('RemoveImageLocally') {
+            steps {
+                removeImage(env.DOCKER_IMAGE)
+            }
+        }
+
+        stage('DeployOnK8s') {
+            steps {
+                deployOnK8s(env.K8S_API_SERVER, env.K8S_TOKEN, env.NAMESPACE, env.DOCKER_IMAGE, env.DEPLOYMENT_FILE)
+            }
+        }
+    }
+}
