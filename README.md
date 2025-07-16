@@ -189,13 +189,6 @@ spec:
 
 ---
 
-## 📌 Notes
-
-- `REPLACE_IMAGE` in the YAML is replaced by the pipeline before applying it to Kubernetes.
-- The shared library auto-creates the namespace if it doesn't exist.
-- Each pipeline stage runs in a clean and modular fashion via shared library functions.
-
----
 
 ## ✅ Result
 
