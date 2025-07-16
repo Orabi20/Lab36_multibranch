@@ -21,6 +21,6 @@ spec:
           effect: "NoSchedule"
       containers:
         - name: jenkins-app
-          image: orabi20/jenkins-app-lab35:v6
+          image: orabi20/jenkins-app-lab35:6
           ports:
             - containerPort: 8080
