@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-app-lab35
+  namespace: ivolve
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins-app-lab35
+  template:
+    metadata:
+      labels:
+        app: jenkins-app-lab35
+    spec:
+      containers:
+        - name: jenkins-app-lab35
+          image: orabi20/jenkins-app-lab34:latest
+          ports:
+            - containerPort: 8080
+      tolerations:
+        - key: "workload"
+          operator: "Equal"
+          value: "app"
+          effect: "NoSchedule"
