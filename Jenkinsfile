@@ -7,7 +7,7 @@ pipeline {
         DOCKER_USERNAME   = credentials('Docker-User')
         DOCKER_PASSWORD   = credentials('Docker-Password')
         K8S_API_SERVER    = credentials('api-server')
-        K8S_TOKEN         = credentials('token')
+        K8S_TOKEN         = credentials('token2')
         DEPLOYMENT_FILE   = 'deployment.yaml'
     }
 
