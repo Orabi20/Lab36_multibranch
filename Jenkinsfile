@@ -36,29 +36,29 @@ pipeline {
             }
         }
 
-        stage('BuildImage') {
-            steps {
-                buildImage(env.DOCKER_IMAGE)
-            }
-        }
+        // stage('BuildImage') {
+        //     steps {
+        //         buildImage(env.DOCKER_IMAGE)
+        //     }
+        // }
 
-        stage('ScanImage') {
-            steps {
-                scanImage(env.DOCKER_IMAGE)
-            }
-        }
+        // stage('ScanImage') {
+        //     steps {
+        //         scanImage(env.DOCKER_IMAGE)
+        //     }
+        // }
 
-        stage('PushImage') {
-            steps {
-                pushImage(env.DOCKER_IMAGE, env.DOCKER_USERNAME, env.DOCKER_PASSWORD)
-            }
-        }
+        // stage('PushImage') {
+        //     steps {
+        //         pushImage(env.DOCKER_IMAGE, env.DOCKER_USERNAME, env.DOCKER_PASSWORD)
+        //     }
+        // }
 
-        stage('RemoveImageLocally') {
-            steps {
-                removeImage(env.DOCKER_IMAGE)
-            }
-        }
+        // stage('RemoveImageLocally') {
+        //     steps {
+        //         removeImage(env.DOCKER_IMAGE)
+        //     }
+        // }
 
         stage('DeployOnK8s') {
             steps {
