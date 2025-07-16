@@ -17,7 +17,7 @@ spec:
       tolerations:
         - key: "workload"
           operator: "Equal"
-          value: "app"
+          value: "master"
           effect: "NoSchedule"
       containers:
         - name: jenkins-app
