@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-app
+  labels:
+    app: jenkins-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins-app
+  template:
+    metadata:
+      labels:
+        app: jenkins-app
+    spec:
+      containers:
+        - name: jenkins-app
+          image: orabi20/jenkins-app-lab35:v6
+          ports:
+            - containerPort: 8080
+      tolerations:
+        - key: "workload"
+          operator: "Equal"
+          value: "app"
+          effect: "NoSchedule"
