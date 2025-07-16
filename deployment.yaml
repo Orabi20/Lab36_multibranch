@@ -19,8 +19,4 @@ spec:
           image: orabi20/jenkins-app-lab35:v6
           ports:
             - containerPort: 8080
-      tolerations:
-        - key: "workload"
-          operator: "Equal"
-          value: "app"
-          effect: "NoSchedule"
+     
