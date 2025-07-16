@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: jenkins-app
-          image: REPLACE_IMAGE  # Will be replaced in pipeline
+          image: orabi20/jenkins-app-lab35:v6
           ports:
             - containerPort: 8080
       tolerations:
